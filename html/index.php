@@ -11,17 +11,19 @@
 
     <body>
 		<div>
-			<h1>Thermometre</h1> 
+			<h1>Température</h1> 
 		</div>
 		<p>
 		<?php
-			$txt = file_get_contents("../txt/objet.json");
+			$fch = "../txt/objet.json";
+			$txt = file_get_contents($fch);
 			//$fch = fopen("../txt/objet.json", "r");
 			//$txt = fgets($fch);
 			$objJSON = json_decode($txt);
-			echo  "Il fait ".$objJSON->temperature."°C avec ".$objJSON->humidite."% d'humidite.";
+			echo  "Il fait ".$objJSON->temperature."°C avec ".$objJSON->humidite."% d'humidite.<br>";
 			//fclose($fch);
-			//echo date();
+			if (file_exists($fch))
+    			echo "Le ".date("d/m/Y \à H:i:s.", filemtime($fch));
 			$baragraph_height = 161 + $objJSON->temperature * 4;
 			$baragraph_top = 315 - $objJSON->temperature * 4;
 		?>
