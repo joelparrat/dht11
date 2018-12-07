@@ -6,6 +6,7 @@
     <head>
         <title>Projet DHT11</title>        
         <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="1">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
 
