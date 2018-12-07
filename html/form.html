@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Projet DHT11</title>        
+        <meta charset="UTF-8">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
+    </head>
+
+    <body>
+    	<h1>Simulation du NodeMCU</h1>
+    	<p>
+    		Ce formulaire permet de tester l'envoi d'une temperature vers le serveur comme le ferait le NodeMCU.
+    	</p>
+    	
+		<form action="../php/store_temp.php" method="post">
+			<label>Temperature:</label>
+			<input type="text" name="data" placeholder="valeur nemerique"/>
+			<button>Envoyer</button>
+		</form>
+		
+		<!-- <?php include("../php/fonction.php"); ?> -->
+		<!-- <script src="../js/script.js"></script> -->
+    </body>
+
+</html>
